@@ -9,8 +9,29 @@ const navItems = [
   { id: 'domowe-sposoby', label: 'Domowe sposoby' },
   { id: 'modernizacja', label: 'Modernizacja' },
   { id: 'wnioski', label: 'Wnioski, dokumenty' },
-  { id: 'dotacje', label: 'Znajdz dotacje' },
+  { id: 'dotacje', label: 'Znajdź dotację' },
 ]
+
+function WhiteIcon({ src, className }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={className}
+      style={{
+        backgroundColor: '#FFFFFF',
+        WebkitMaskImage: `url(${src})`,
+        maskImage: `url(${src})`,
+        WebkitMaskRepeat: 'no-repeat',
+        maskRepeat: 'no-repeat',
+        WebkitMaskPosition: 'center',
+        maskPosition: 'center',
+        WebkitMaskSize: 'contain',
+        maskSize: 'contain',
+        boxShadow: 'inset 0 0 0 40px #FFFFFF',
+      }}
+    />
+  )
+}
 
 function NavigationBar() {
   return (
@@ -19,20 +40,20 @@ function NavigationBar() {
       style={{ backgroundColor: NAV_BG }}
     >
       <div className="flex h-full items-center border-r border-white/25 pr-4 pl-[21px]">
-        <img src={projectIconUrl} alt="" className="mr-2.5 h-[47px] w-[47px]" />
+        <WhiteIcon src={projectIconUrl} className="mr-2.5 h-[47px] w-[47px] shrink-0" />
         <p className="text-[19px] leading-tight font-black tracking-tight">
           TRZYMAJCIE
           <br />
-          SIE CIEPLO
+          SIĘ CIEPŁO
         </p>
       </div>
 
       <button
         className="flex h-full w-[88px] items-center justify-center"
         style={{ backgroundColor: NAV_ACTIVE_BG }}
-        aria-label="Strona glowna"
+        aria-label="Strona główna"
       >
-        <img src={homeIconUrl} alt="" className="h-9 w-[35px]" />
+        <WhiteIcon src={homeIconUrl} className="h-9 w-[35px]" />
       </button>
 
       <nav className="flex min-w-0 flex-1 items-center justify-evenly px-2">
@@ -48,7 +69,7 @@ function NavigationBar() {
       </nav>
 
       <button className="mr-3 flex h-[41px] w-[41px] items-center justify-center" aria-label="Szukaj">
-        <img src={searchIconUrl} alt="" className="h-[41px] w-[41px]" />
+        <WhiteIcon src={searchIconUrl} className="h-[41px] w-[41px]" />
       </button>
     </header>
   )

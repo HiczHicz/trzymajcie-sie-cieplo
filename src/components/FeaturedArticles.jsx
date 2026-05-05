@@ -7,7 +7,7 @@ function MainArticle() {
     <article className="h-[570px] w-[650px] border-[3px] border-[#e8e6e6] bg-white">
       <img src={mainArticlePhoto} alt="" className="h-[433px] w-full object-cover" />
       <h2 className="px-5 pt-5 text-[30px] leading-[1.1] font-bold text-black">
-        Ogrzej swoje mieszkanie krok po kroku (uwzgledniajac swoj budzet)
+        Ogrzej swoje mieszkanie krok po kroku (uwzględniając swój budżet)
       </h2>
     </article>
   )
@@ -27,8 +27,8 @@ function FeaturedArticles() {
     <section className="mx-auto mt-[59px] flex w-full max-w-[1284px] gap-[56px]">
       <MainArticle />
       <div className="flex flex-col gap-[60px]">
-        <SideArticle image={sideArticle1Photo} title="Cieplobus - warsztaty, termowizja" />
-        <SideArticle image={sideArticle2Photo} title="Nie lekcewaz zimna. Choroby spowodowane niska temperatura" />
+        <SideArticle image={sideArticle1Photo} title="Ciepłobus - warsztaty, termowizja" />
+        <SideArticle image={sideArticle2Photo} title="Nie lekceważ zimna. Choroby spowodowane niską temperaturą" />
       </div>
     </section>
   )

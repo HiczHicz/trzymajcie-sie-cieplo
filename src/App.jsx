@@ -1,6 +1,7 @@
 import ArticleFeed from './components/ArticleFeed'
 import FeaturedArticles from './components/FeaturedArticles'
 import NavigationBar from './components/NavigationBar'
+import SurveyModal from './components/SurveyModal'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <NavigationBar />
       <FeaturedArticles />
       <ArticleFeed />
+      <SurveyModal />
     </main>
   )
 }
