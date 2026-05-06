@@ -1,1 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 @import "tailwindcss";
+
+html,
+body,
+#root {
+  font-family: "Inclusive Sans", "Inter", "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+}
