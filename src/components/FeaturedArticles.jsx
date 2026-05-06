@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import articleSide2HeaderImage from '../assets/article-side-2-header.png'
 
-const mainArticlePhoto = 'https://www.figma.com/api/mcp/asset/1907b534-b4ab-4f2f-adbd-f7191bafadf9'
+const mainArticlePhoto = 'https://pliki.propertydesign.pl/i/18/89/96/188996_r0_1140.jpg'
 const sideArticle1Photo = 'https://www.figma.com/api/mcp/asset/4d76d5c3-94de-4b5f-b9fd-6c2ca132fffc'
 
 const sideArticle2Content = {
@@ -12,12 +12,12 @@ const sideArticle2Content = {
 function MainArticle() {
   return (
     <Link
-      to="/test-per"
+      to="/article/main-article"
       className="block h-[570px] w-[650px] border-[3px] border-[#e8e6e6] bg-white transition-colors hover:bg-[#efefef]"
     >
       <img src={mainArticlePhoto} alt="" className="h-[433px] w-full object-cover" />
       <h2 className="px-5 pt-5 text-[30px] leading-[1.1] font-bold text-black">
-        Ogrzej swoje mieszkanie krok po kroku (uwzględniając swój budżet)
+        Jak samodzielnie wykonać diagnostykę mieszkania? Dlaczego jest ci zimno?
       </h2>
     </Link>
   )

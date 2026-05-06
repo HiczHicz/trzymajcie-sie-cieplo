@@ -2,12 +2,13 @@ import { NavLink } from 'react-router-dom'
 
 const NAV_BG = '#aa2b1f'
 
-const projectIconUrl = 'https://www.figma.com/api/mcp/asset/72de2231-6f09-4324-8a03-f4ffeb3809d9'
+const projectIconUrl =
+  '/@fs/C:/Users/annag/.cursor/projects/c-Users-annag-trzymajcie-sie-cieplo-trzymajcie-sie-cieplo/assets/c__Users_annag_AppData_Roaming_Cursor_User_workspaceStorage_10e6060da0851eec8ce5b1c08ea1d7a9_images_logo_trzymajcie_sie_cieplo-700f5efc-0307-4e00-b235-cddd560d93ac.png'
 const searchIconUrl = 'https://www.figma.com/api/mcp/asset/6c3d50e3-aace-4014-95ce-a16ec8efe1ad'
 
 const navItems = [
-  { id: 'domowe-sposoby', label: 'Domowe sposoby', to: '/domowe-sposoby' },
-  { id: 'modernizacja', label: 'Modernizacja', to: '/modernizacja' },
+  { id: 'domowe-sposoby', label: 'Test', to: '/test-per' },
+  { id: 'modernizacja', label: 'Baza Wiedzy', to: '/modernizacja' },
   { id: 'wnioski', label: 'Wnioski, dokumenty', to: '/wnioski-dokumenty' },
   { id: 'dotacje', label: 'Znajdź dotację', to: '/znajdz-dotacje' },
 ]
@@ -33,6 +34,28 @@ function WhiteIcon({ src, className }) {
   )
 }
 
+function ProjectLogo({ src, className }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={className}
+      style={{
+        backgroundColor: '#FFFFFF',
+        WebkitMaskImage: `url(${src})`,
+        maskImage: `url(${src})`,
+        WebkitMaskRepeat: 'no-repeat',
+        maskRepeat: 'no-repeat',
+        WebkitMaskPosition: 'center',
+        maskPosition: 'center',
+        WebkitMaskSize: 'contain',
+        maskSize: 'contain',
+        WebkitMaskMode: 'luminance',
+        maskMode: 'luminance',
+      }}
+    />
+  )
+}
+
 function NavigationBar() {
   return (
     <div className="sticky top-0 z-40 w-full" style={{ backgroundColor: NAV_BG }}>
@@ -42,13 +65,13 @@ function NavigationBar() {
           end
           aria-label="Strona główna"
           className={({ isActive }) =>
-            `flex h-full w-[312px] items-center justify-center gap-2.5 transition-colors ${
+            `flex h-full w-[312px] items-center justify-center gap-0.5 pr-2 pt-1 transition-colors ${
               isActive ? 'bg-[#5c1f19]' : 'hover:bg-[#5c1f19]'
             }`
           }
         >
-          <WhiteIcon src={projectIconUrl} className="h-[47px] w-[47px] shrink-0" />
-          <p className="text-[19px] leading-tight font-black tracking-tight">
+          <ProjectLogo src={projectIconUrl} className="h-[112px] w-[112px] shrink-0 -ml-2" />
+          <p className="-ml-4 text-[19px] leading-tight font-black tracking-tight">
             TRZYMAJCIE
             <br />
             SIĘ CIEPŁO

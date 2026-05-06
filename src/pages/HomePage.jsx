@@ -3,7 +3,6 @@ import ArticleFeed from '../components/ArticleFeed'
 import FeaturedArticles from '../components/FeaturedArticles'
 import NavigationBar from '../components/NavigationBar'
 import NavigationBarSecondary from '../components/NavigationBarSecondary'
-import SurveyModal from '../components/SurveyModal'
 
 function HomePage() {
   const [selectedAudience, setSelectedAudience] = useState('tenant')
@@ -14,7 +13,6 @@ function HomePage() {
       <NavigationBarSecondary selectedAudience={selectedAudience} onSelectAudience={setSelectedAudience} />
       <FeaturedArticles />
       <ArticleFeed />
-      <SurveyModal />
     </main>
   )
 }
